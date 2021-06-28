@@ -11,21 +11,54 @@ const calculation = (num1, num2) =>{
     }
     return resultObj;
 }
+
+
+alphabet_order = str =>
+  {
+return str.split('').sort().join('');
+  }
+
+
+function reverse_a_number(n)
+{
+	n = n + "";
+	return n.split("").reverse().join("");
+}
+
+const reversalNum = num =>
+{
+    num = num + "";
+    return num.split("").reverse().join("");
+}
+
 const reverseNum = num =>{
-    var rev_sum = 0;
+       var rev_num = 0;
     if (num > 0)
     {
-        rev_sum = rev_sum*10 + num%10;
+        rev_num = rev_num*10 + num%10;
         num = num/10;
-        return rev_sum;
+        return rev_num;
     }
+return rev_num
 }
 
 
 
+const substractNum = (num1,num2) =>
+{
+    const sub = num1 - num2;
+  const resultObj = {
+      sub:sub
+  }
+  return resultObj;
+}
 
 module.exports = {
     calculation ,
-    reverseNum
+    reverseNum,
+    substractNum,
+    alphabet_order,
+    reverse_a_number,
+    reversalNum
 }
 

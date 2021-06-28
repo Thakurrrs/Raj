@@ -31,7 +31,7 @@ const { test } = require("../mccTech/mindtree");
 
 
 ///Rohan Functions Imported here
-const {calculation,reverseNum} = require("../learningFunctions/functions");
+const {calculation,reverseNum,substractNum,reverse_a_number,reversalNum,alphabet_order} = require("../learningFunctions/functions");
 
 //SQL
 const { sqlGetRecords } = require("../sql/getRecords");
@@ -134,7 +134,7 @@ server.use("/api/insertFile", upload.single("image"), (req, res) => {
 //  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 //});
 server.use("/getDetails", (req, res) => {
-  const result =  reverseNum(1345);
+  const result =  alphabet_order("pallindrome");
   console.log("Result", result);
   res.send(result);
 });
